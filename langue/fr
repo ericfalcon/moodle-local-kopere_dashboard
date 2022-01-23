@@ -1,0 +1,555 @@
+<?php
+// This file is part of Moodle - http://moodle.org/
+//
+// Moodle is free software: you can redistribute it and/or modify
+// it under the terms of the GNU General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+//
+// Moodle is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+//
+// You should have received a copy of the GNU General Public License
+// along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+
+/**
+ * @package  local_kopere_dashboard
+ * @copyright 2017 Eduardo Kraus {@link http://eduardokraus.com}
+ * @license  http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ */
+
+$string['modulename'] = 'Kopere Dashboard';
+$string['pluginname'] = 'Kopere Dashboard';
+$string['kopere_dashboard:view'] = 'Voir le tableau de bord Kopere';
+$string['kopere_dashboard:manage'] = 'Gérer le tableau de bord Kopere';
+$string['dashboard'] = 'Tableau de bord';
+$string['settings'] = 'Réglages';
+$string['close'] = 'Fermer;
+$string['crontask_tmp'] = 'Cron effacer le dossier tmp';
+$string['crontask_performance'] = 'Cron pour enregistrer les données de performances';
+
+$string['kopere_dashboard_open'] = 'Ouvrir Kopere';
+$string['kopere_dashboard_open_desc'] = 'De quelle manière voulez-vous ouvrir le tableau de bord Kopere';
+$string['kopere_dashboard_open_internal'] = 'Ouverture interne';
+$string['kopere_dashboard_open_popup'] = 'Dans une fenêtre contextuelle';
+$string['kopere_dashboard_open_blank'] = 'Dans une nouvelle fenêtre';
+$string['kopere_dashboard_open_top'] = 'Dans la même fenêtre';
+
+$string['integracaoroot'] = 'Intégration';
+
+$string['messageprovider:kopere_dashboard_messages'] = 'Envoyer des notifications';
+$string['kopere_dashboard:emailconfirmsubmission'] = 'Envoyer des notifications';
+
+$string['open_dashboard'] = 'Ouvrir le tableau de bord';
+
+$string['dateformat'] = '%d %B %Y, %I:%M %p';
+$string['datetime'] = '%d/%m/%Y, %H:%M';
+$string['php_datetime'] = 'm/d/Y H:i';
+
+$string['help_title'] = 'Aide avec cette page';
+
+// Html/tinymce.
+$string['blocks'] = 'Blocs';
+$string['blocks_paragraph'] = 'Paragraphe';
+$string['image_alignment'] = 'Alignement des images';
+$string['image_alignment_left'] = 'Alignement à gauche';
+$string['image_alignment_right'] = 'Alignement à droite';
+$string['colors'] = 'Couleurs';
+$string['background'] = 'Fond';
+$string['color_red'] = 'Rouge';
+$string['color_blue'] = 'Bleu';
+$string['color_green'] = 'Vert';
+$string['color_yellow'] = 'Jaune';
+$string['color_orange'] = 'Orange';
+$string['color_grey'] = 'Gris';
+$string['color_purple'] = 'Violet';
+$string['color_brown'] = 'Brun';
+$string['filemanager_title'] = 'Gestionnaire de fichiers';
+
+// Bases de données.
+$string['datatables_sEmptyTable'] = 'Aucun enregistrement trouvé';
+$string['datatables_sInfo'] = 'Affichage de _START_ à _END_ enregistrements sur _TOTAL_';
+$string['datatables_sInfoEmpty'] = 'Affichage de 0 à 0 sur 0 enregistrements';
+$string['datatables_sInfoFiltered'] = '(Filtré à partir de _MAX_ enregistrements)';
+$string['datatables_sInfoPostFix'] = '';
+$string['datatables_sInfoThousands'] = '.';
+$string['datatables_sLengthMenu'] = '_MENU_ résultats par page';
+$string['datatables_sLoadingRecords'] = 'Chargement ...';
+$string['datatables_sProcessing'] = 'Traitement ...';
+$string['datatables_sZeroRecords'] = 'Aucun enregistrement trouvé';
+$string['datatables_sSearch'] = 'Chercher:';
+$string['datatables_oPaginate_sNext'] = 'Suivant';
+$string['datatables_oPaginate_sPrevious'] = 'Précédent';
+$string['datatables_oPaginate_sFirst'] = 'Premier';
+$string['datatables_oPaginate_sLast'] = 'Dernier';
+$string['datatables_oAria_sSortAscending'] = ': Trier les colonnes par ordre croissant';
+$string['datatables_oAria_sSortDescending'] = ': Trier les colonnes par ordre décroissant';
+
+// Util/navigation.
+$string['navigation_page'] = 'Page {$a->actualPage} sur {$a->countPages}';
+
+// A propos.
+$string['about_title'] = 'A propos';
+$string['about_project'] = 'Projet open source développé et maintenu par';
+$string['about_code'] = 'Code disponible à';
+$string['about_help'] = 'Help is on';
+$string['about_bug'] = 'Si vous avez trouvé un BUG ou si vous souhaitez suggérer des améliorations, ouvrez un problème';
+
+// Sauvegarde.
+$string['backup_title'] = 'Sauvegarde';
+$string['backup_windows'] = 'Non disponible sur Windows Server !';
+$string['backup_hours'] = 'N'exécutez pas de sauvegarde aux heures de pointe !';
+$string['backup_sleep'] = 'L'exécution de la sauvegarde peut prendre plusieurs minutes.';
+$string['backup_newnow'] = 'Créer une nouvelle sauvegarde maintenant';
+$string['backup_newsqlnow'] = 'Créer une nouvelle sauvegarde de base de données maintenant';
+$string['backup_noshell'] = 'La fonction shell_exec est désactivée !';
+$string['backup_list'] = 'Liste des sauvegardes';
+$string['backup_list_file'] = 'Fichier';
+$string['backup_list_created'] = 'Créé en';
+$string['backup_list_size'] = 'Taille';
+$string['backup_list_action'] = 'Action';
+$string['backup_none'] = 'Aucune sauvegarde trouvée !';
+$string['backup_execute_success'] = 'Sauvegarde créée avec succès !';
+$string['backup_execute_exec'] = 'Exécution de la sauvegarde';
+$string['backup_execute_date'] = 'Date de génération :';
+$string['backup_execute_database'] = 'Base de données:';
+$string['backup_execute_table'] = 'Exécution de la sauvegarde de table';
+$string['backup_execute_structure'] = 'Structure pour la table';
+$string['backup_execute_dump'] = 'Copier (dump) les données de la table';
+$string['backup_execute_dump_error'] = 'Erreur de capture de table';
+$string['backup_execute_complete'] = 'Sauvegarde terminée !';
+$string['backup_returnlist'] = 'Retour à la liste des sauvegardes';
+$string['backup_deletesucessfull'] = 'Sauvegarde supprimée avec succès!';
+$string['backup_deleting'] = 'Hors sauvegarde';
+$string['backup_delete_confirm'] = 'Suppression de sauvegarde';
+$string['backup_delete_title'] = 'Voulez-vous vraiment supprimer le <strong>{$a}</strong>';
+$string['backup_notound'] = 'Fichier introuvable!';
+
+// Rapport de référence.
+$string['benchmark_title'] = 'Test de performance';
+$string['benchmark_based'] = 'Basé sur un plug-in';
+$string['benchmark_info'] = '<p>Ce test peut prendre jusqu'à 1 minute pour s'exécuter.</p><p>Essayez de faire plus d'un test pour une moyenne.</p><p>Et, évitez les heures de pointe.</ p>';
+$string['benchmark_execute'] = 'Exécutez le test';
+$string['benchmark_executing'] = 'Exécution du test';
+$string['benchmark_title2'] = 'Test de performances d'hébergement';
+$string['benchmark_timetotal'] = 'Temps total:';
+$string['benchmark_decription'] = 'Description';
+$string['benchmark_timesec'] = 'Temps, en secondes';
+$string['benchmark_seconds'] = 'secondes';
+$string['benchmark_max'] = 'Valeur maximale acceptable';
+$string['benchmark_critical'] = 'Limite critique';
+$string['benchmark_testconf'] = 'Tester les paramètres de Moodle';
+$string['benchmark_testconf_problem'] = 'Problème';
+$string['benchmark_testconf_status'] = 'Statut';
+$string['benchmark_testconf_description'] = 'Description';
+$string['benchmark_testconf_action'] = 'Action';
+
+$string['cloadname'] = 'Temps de chargement de Moodle';
+$string['cloadmoreinfo'] = 'Exécutez le fichier de configuration &laquo;config.php&raquo;';
+$string['processorname'] = 'Fonction appelée plusieurs fois';
+$string['processormoreinfo'] = 'Une fonction est appelée dans une boucle pour tester la vitesse du processeur';
+$string['filereadname'] = 'Lecture de fichiers';
+$string['filereadmoreinfo'] = 'Testez la vitesse de lecture dans le dossier temporaire de Moodle';
+$string['filewritename'] = 'Création de fichiers';
+$string['filewritemoreinfo'] = 'Testez la vitesse d'écriture dans le dossier temporaire de Moodle';
+$string['coursereadname'] = 'Lecture de cours';
+$string['coursereadmoreinfo'] = 'Tester la vitesse de lecture pour lire un cours';
+$string['coursewritename'] = 'Ecriture de cours;
+$string['coursewritemoreinfo'] = 'Tester la vitesse de la base de données pour écrire un cours';
+$string['querytype1name'] = 'Demande complexe (n°1)';
+$string['querytype1moreinfo'] = 'Tester la vitesse de la base de données pour exécuter une requête complexe';
+$string['querytype2name'] = 'Demande complexe (n°2)';
+$string['querytype2moreinfo'] = 'Tester la vitesse de la base de données pour exécuter une requête complexe';
+$string['loginguestname'] = 'Temps de connexion avec le compte invité';
+$string['loginguestmoreinfo'] = 'Mesurer le temps de chargement de la page de connexion avec le compte invité';
+$string['loginusername'] = 'Temps pour se connecter avec un faux compte utilisateur';
+$string['loginusermoreinfo'] = 'Mesurer le temps de chargement de la page de connexion avec un faux compte utilisateur';
+
+// Moniteur de performances.
+$string ['performancemonitor_cpu'] = 'Utilisation du processeur';
+$string ['performancemonitor_memory'] = 'Mémoire';
+$string ['performancemonitor_hd'] = 'Moodledata';
+$string ['performancemonitor_performance'] = 'Performance';
+$string ['performancemonitor_min'] = '{$a} min:';
+
+// Cours.
+$string['courses_title'] = 'Cours';
+$string['courses_title1'] = 'Liste des cours';
+$string['courses_name'] = 'Nom du cours';
+$string['courses_shortname'] = 'Nom court';
+$string['courses_visible'] = 'Visible';
+$string['courses_invisible'] = 'Caché';
+$string['courses_enrol'] = 'Nº d'étudiants inscrits';
+$string['courses_invalid'] = 'ID de cours invalide !';
+$string['courses_notound'] = 'Cours introuvable !';
+$string['courses_sumary'] = 'Résumé';
+$string['courses_edit'] = 'Modifier';
+$string['courses_acess'] = 'Accès';
+$string['courses_titleenrol'] = 'Étudiants inscrits';
+$string['courses_student_name'] = 'Nom';
+$string['courses_student_email'] = 'E-mail';
+$string['courses_student_status'] = 'Statut d'enregistrement';
+$string['courses_page_title'] = 'Pages déjà créées';
+$string['courses_page_create'] = 'Créer une page basée sur ce résumé';
+
+// Rapports.
+$string['reports_title'] = 'Rapports';
+$string['reports_download'] = 'Télécharger ces données';
+$string['reports_selectcourse'] = 'Sélectionnez le cours pour générer le rapport';
+$string['reports_notfound'] = 'Rapport introuvable !';
+$string['reports_reportcat_badge'] = 'Rapport sur les badges';
+$string['reports_reportcat_courses'] = 'Rapport de cours';
+$string['reports_reportcat_enrol_cohort'] = 'Rapport de cohorte';
+$string['reports_reportcat_enrol_guest'] = 'Rapport des visiteurs';
+$string['reports_reportcat_server'] = 'Rapport système';
+$string['reports_reportcat_user'] = 'Rapport d'utilisateur';
+$string['reports_report_badge-1'] = 'Tous les badges disponibles dans Moodle';
+$string['reports_report_badge-2'] = 'Tous les badges attribués par utilisateur';
+$string['reports_report_courses-1'] = 'Progrès avec pourcentage d'achèvement';
+$string['reports_report_courses-2'] = 'Cours pour lesquels les groupes sont activés';
+$string['reports_report_courses-3'] = 'Rapport d'accès au cours';
+$string['reports_report_courses-4'] = 'Rapport d'accès au cours avec notes';
+$string['reports_report_courses-5'] = 'Dernier accès au cours';
+$string['reports_report_enrol_cohort-1'] = 'Cohortes et utilisateurs';
+$string['reports_report_enrol_guest-1'] = 'Rapport sur les connexions des invités';
+$string['reports_report_server-1'] = 'Rapport d'utilisation du disque';
+$string['reports_report_user-1'] = 'Nombre d'étudiants dans chaque cours';
+$string['reports_report_user-2'] = 'Achèvement du cours avec critères';
+$string['reports_report_user-3'] = 'Rapport quotidien d'accès des utilisateurs';
+$string['reports_report_user-4'] = 'Rapport sur les connexions des étudiants';
+$string['reports_report_user-5'] = 'Utilisateurs qui ne se sont jamais connectés';
+$string['reports_report_user-6'] = 'Utilisateurs ayant terminé le cours';
+$string['reports_report_user-7'] = 'Utilisateurs enregistrés, qui ne se connectent pas au cours';
+$string['reports_report_user-8'] = 'Tous les utilisateurs';
+$string['reports_timecreated'] = 'Enregistré dans';
+$string['reports_coursesize'] = 'Fichiers de cours';
+$string['reports_modulessize'] = 'Fichiers des modules';
+$string['reports_lastlogin'] = 'Se connecter à';
+$string['reports_cohort'] = 'Nom des cohortes';
+$string['reports_groupnode'] = 'Mode de groupe';
+$string['reports_groupname'] = 'Nom de groupe';
+$string['reports_datastudents'] = 'Données sur les étudiants';
+$string['reports_datacourses'] = 'Données de cours';
+$string['reports_coursecreated'] = 'Date d'inscription';
+$string['reports_activitiescomplete'] = 'Activités terminées';
+$string['reports_activitiesassigned'] = 'Activités assignées';
+$string['reports_coursecompleted'] = '% de Cours terminé';
+$string['reports_badgename'] = 'Badge';
+$string['reports_criteriatype'] = 'Critères';
+$string['reports_dateissued'] = 'Dans';
+$string['reports_context'] = 'Contexte';
+$string['reports_export'] = 'Exporter vers Excel';
+$string['reports_noneaccess'] = 'Pas d'accès';
+$string['reports_access_n'] = 'consulté {$a} fois';
+
+$string['reports_settings_title'] = 'Modifier le rapport';
+$string['reports_settings_form_title'] = 'Modifier le rapport';
+$string['reports_settings_form_enable'] = 'Activé?';
+$string['reports_settings_form_reportsql'] = 'Rapport SQL';
+$string['reports_settings_form_prerequisit'] = 'Prérequis avant de charger le rapport';
+$string['reports_settings_form_none'] = 'Rien';
+$string['reports_settings_form_prerequisit_listCourses'] = 'Liste des cours';
+$string['reports_settings_form_prerequisit_badge_status_text'] = 'Changer le statut du badge en texte';
+$string['reports_settings_form_prerequisit_badge_criteria_type'] = 'Modifiez les critères du badge en texte';
+$string['reports_settings_form_prerequisit_userfullname'] = 'Exécutez le nom complet ($ utilisateur) sur chaque ligne du rapport';
+$string['reports_settings_form_prerequisit_courses_group_mode'] = 'Mettre le mode groupe en texte';
+$string['reports_settings_form_foreach'] = 'Modification des colonnes SQL';
+$string['reports_settings_form_colunas'] = 'Colonnes';
+$string['reports_settings_form_colunas_title'] = 'Titre';
+$string['reports_settings_form_colunas_key'] = 'colonne SQL';
+$string['reports_settings_form_colunas_type'] = 'Type de données';
+$string['reports_settings_form_colunas_type_int'] = 'Nombre';
+$string['reports_settings_form_colunas_type_date'] = 'Données';
+$string['reports_settings_form_colunas_type_currency'] = 'Devises';
+$string['reports_settings_form_colunas_type_text'] = 'Texte';
+$string['reports_settings_form_colunas_type_bytes'] = 'Bytes';
+$string['reports_settings_form_colunas_extra'] = 'laissez vides les champs ci-dessous si vous n\'en avez pas besoin !';
+$string['reports_settings_savesuccess'] = 'Enregistré avec succès !';
+$string['reports_settings_form_save'] = 'Enregistrer le rapport';
+
+// Tableau de bord.
+$string['dashboard_title_user'] = 'Utilisateurs / Actifs';
+$string['dashboard_title_online'] = 'En ligne / Dernière heure';
+$string['dashboard_title_course'] = 'Cours / Visible';
+$string['dashboard_title_disk'] = 'Utilisation du disque';
+$string['dashboard_grade_title'] = 'Dernières notes';
+$string['dashboard_grade_inmod'] = 'dans le module <strong>{$a->itemname}</strong>dans le cours <a href="?classname=courses&method=details&courseid={$a->courseid}">{$a->coursename}</a>';
+$string['dashboard_grade_incourse'] = 'dans le cours <a href="?classname=courses&method=details&courseid={$a->courseid}">{$a->coursename}</a>';
+$string['dashboard_grade_of'] = 'de';
+$string['dashboard_grade_text'] = 'Note reçue {$a->grade} dans {$a->evaluation}';
+$string['dashboard_grade_in'] = 'Dans';
+$string['dashboard_enrol_title'] = 'Dernière inscription';
+$string['dashboard_enrol_inactive'] = 'l'inscription est inactive';
+$string['dashboard_enrol_active'] = 'l'inscription est active';
+$string['dashboard_enrol_text'] = 'Vous êtes inscrit au cours <a href="?classname=courses&method=details&courseid={$a->courseid}">{$a->fullname}</a> et';
+$string['dashboard_enrol_lastmodifield'] = 'Dernier changement dans';
+
+// Notifications.
+$string['notification_title'] = 'Notifications';
+$string['notification_subtitle'] = '<p>Recevez des notifications chaque fois qu'une action se produit dans Moodle.</p>';
+$string['notification_new'] = 'Nouvelle notification';
+$string['notification_testsmtp'] = 'Testez si les paramètres SMTP sont corrects.';
+$string['notification_testsmtp_message'] = '<p> Il s'agit d'un test de soumission par e-mail. </p>';
+$string['notification_testsmtp_error'] = 'Moodle n'envoie pas d'e-mail lorsque le destinataire et l'expéditeur sont identiques ! <br> Et vous êtes l'administrateur principal de ce moodle. Donc pour tester vous devez vous connecter avec un autre administrateur.';
+$string['notification_testsmtp_subject'] = 'Test de soumission par e-mail -';
+$string['notification_table_module'] = 'Module';
+$string['notification_table_action'] = 'Action';
+$string['notification_table_subject'] = 'Sujet';
+$string['notification_table_active'] = 'Actif';
+$string['notification_table_empty'] = 'Aucune notification !';
+$string['notification_add_module'] = 'Pour quel module souhaitez-vous recevoir une notification ?';
+$string['notification_add_moduledesc'] = 'Les modules/activités inutilisées n'apparaissent pas !';
+$string['notification_add_selectmodule'] = 'Sélectionnez Module !';
+$string['notification_add_action'] = 'Pour quelle action souhaitez-vous recevoir des notifications ?';
+$string['notification_add_create'] = 'Créer notification';
+$string['notification_notound'] = 'Notification introuvable !';
+$string['notification_editing'] = 'Modifier la notification';
+$string['notification_from'] = 'À partir de';
+$string['notification_fromdesc'] = 'Qui sera l'expéditeur du message ?';
+$string['notification_from_admin'] = 'Administrateur du site';
+$string['notification_to'] = 'À';
+$string['notification_todesc'] = 'Qui recevra ces messages ?';
+$string['notification_todesc_admin'] = 'Administrateur de site (principal uniquement)';
+$string['notification_todesc_admins'] = 'Administrateurs de site (tous les administrateurs)';
+$string['notification_todesc_teachers'] = 'Enseignants du cours (Seulement si c'est dans un cours)';
+$string['notification_todesc_student'] = 'L'étudiant (Envoyer à l'étudiant qui a fait l'action)';
+$string['notification_status'] = 'Statut';
+$string['notification_statusdesc'] = 'Si vous souhaitez arrêter les notifications, marquez-le comme "inactif" et enregistrez !)';
+$string['notification_status_active'] = 'Actif';
+$string['notification_status_inactive'] = 'Inactif';
+$string['notification_subject'] = 'Sujet';
+$string['notification_subjectdesc'] = 'Objet du message';
+$string['notification_message_html'] = '<p>Hi {[to.fullname]},</p><p>&nbsp;</p><p>Att,<br>{[from.fullname]}.</p>';;<p>Bonjour {[to.fullname]},</p><p>&nbsp;</p><p>Att,<br>{[from.fullname]}.</p>
+$string['notification_message'] = 'Message';
+$string['notification_update'] = 'Alerte de mise à jour';
+$string['notification_create'] = 'Créer une alerte';
+$string['notification_created'] = 'Notification créée !';
+$string['notification_notfound'] = 'Notification introuvable !';
+$string['notification_delete_success'] = 'Notification supprimée avec succès !';
+$string['notification_delete_yes'] = 'Voulez-vous vraiment supprimer cette notification ?';
+$string['notification_setting_config'] = 'Paramètres de message';
+$string['notification_setting_template'] = 'Modèle';
+$string['notification_setting_templatelocation'] = 'Les modèles sont dans le dossier';
+$string['notification_setting_preview'] = 'Aperçu';
+$string['notification_manager'] = 'Gérer les messages';
+$string['notification_core_course_category'] = 'Catégorie de cours';
+$string['notification_core_course'] = 'Cours';
+$string['notification_core_user'] = 'Utilisateurs';
+$string['notification_core_user_enrolment'] = 'Enregistrement de l'utilisateur';
+$string['notification_duplicate'] = 'Cette combinaison de module et d'événement a déjà un écouteur !';
+$string['notification_local_kopere_dashboard'] = 'Tableau de bord Kopere';
+$string['notification_local_kopere_hotmoodle'] = 'Kopere HotMoodle';
+$string['notification_local_kopere_moocommerce'] = 'Kopere MooCommerce';
+$string['notification_local_kopere_dashboard_payment'] = 'Paiement Kopere';
+$string['notification_error_smtp'] = '<p>Pour que les étudiants reçoivent les messages, SMTP doit être configuré.</p>
+           <p><a href="https://moodle.eduardokraus.com/configurar-o-smtp-no-moodle"
+              target="_blank">Lisez ici comment configurer SMTP</a></p>
+           <p><a href="{$a->wwwroot}/admin/settings.php?section={$a->mail}"
+              target="_blank">Cliquez ici pour configurer la sortie des e-mails</a></p>';
+
+// Profil.
+$string['profile_invalid'] = 'ID utilisateur invalide!';
+$string['profile_notfound'] = 'Utilisateur non trouvé!';
+$string['profile_title'] = 'Utilisateurs';
+$string['profile_notenrol'] = 'L'utilisateur n'a pas d'inscription !';
+$string['profile_edit'] = 'modifier';
+$string['profile_enrol_inactive'] = 'L'inscription est inactive';
+$string['profile_enrol_active'] = 'L'inscription est active';
+$string['profile_enrol_expires'] = 'Expire le';
+$string['profile_enrol_notexpires'] = 'et n'expire jamais';
+$string['profile_enrol_start'] = 'Commence à';
+$string['profile_enrol_profile'] = 'Profils';
+$string['profile_access_title'] = 'Accès';
+$string['profile_access_first'] = 'Premier accès en :';
+$string['profile_access_last'] = 'Dernier accès le :';
+$string['profile_access_lastlogin'] = 'Dernière connexion le :';
+$string['profile_userdate_title'] = 'Données';
+$string['profile_link_title'] = 'Liens utiles';
+$string['profile_link_profile'] = 'Voir le profil';
+$string['profile_link_edit'] = 'Editer le profil';
+$string['profile_access'] = 'Accédez en tant que';
+$string['profile_courses_title'] = 'Cours enregistrés';
+
+// Réglages.
+$string['setting_saved'] = 'Paramètres sauvegardés!';
+
+// Inscription des utilisateurs.
+$string['userenrolment_notfound'] = 'Inscription d'utilisateur introuvable !';
+$string['userenrolment_edit'] = 'Modifier la date d'inscription';
+$string['userenrolment_status'] = 'L'inscription est';
+$string['userenrolment_status_active'] = 'Active';
+$string['userenrolment_status_inactive'] = 'Inactive';
+$string['userenrolment_timestart'] = 'L'abonnement commence le';
+$string['userenrolment_timeendstatus'] = 'Activer la durée d'abonnement';
+$string['userenrolment_timeend'] = 'L'abonnement se termine dans';
+$string['userenrolment_created'] = 'Inscription créée dans';
+$string['userenrolment_updated'] = 'Dernière modification de l'inscription en';
+$string['userenrolment_updatesuccess'] = 'Inscription modifiée avec succès !';
+
+// Utilisateur.
+$string['user_title'] = 'Utilisateurs';
+$string['user_table_fullname'] = 'Nom';
+$string['user_table_username'] = 'Nom d'utilisateur';
+$string['user_table_email'] = 'E-mail';
+$string['user_table_phone'] = 'Téléphone fixe';
+$string['user_table_celphone'] = 'Mobile';
+$string['user_table_city'] = 'Ville';
+
+// Utilisateur en ligne.
+$string['useronline_title'] = 'Utilisateurs en ligne';
+$string['useronline_subtitle'] = 'Ouvrir des onglets avec Moodle';
+$string['useronline_table_fullname'] = 'Nom';
+$string['useronline_table_date'] = 'Données';
+$string['useronline_table_page'] = 'Page';
+$string['useronline_table_focus'] = 'Focus';
+$string['useronline_table_screen'] = 'Moniteur';
+$string['useronline_table_navigator'] = 'Navigateur';
+$string['useronline_table_os'] = 'système d'exploitation';
+$string['useronline_table_device'] = 'Appareil';
+$string['useronline_settings_title'] = 'Synchronisation des utilisateurs en ligne des paramètres du serveur';
+$string['useronline_settings_status'] = 'Activer le serveur de synchronisation des utilisateurs en ligne';
+$string['useronline_settings_ssl'] = 'Activer SSL?';
+$string['useronline_settings_url'] = 'URL du serveur';
+$string['useronline_settings_port'] = 'Port de serveur';
+
+// Accès utilisateur
+$string['useraccess_title'] = 'Accès utilisateur';
+
+// Importation d'utilisateurs.
+$string['userimport_title'] = 'Importation d'utilisateurs';
+$string['userimport_upload'] = 'Faites glisser les fichiers CSV ici ou cliquez pour ouvrir le champ de recherche.';
+$string['userimport_moveuploadedfile_error'] = 'ERREUR lors du déplacement du fichier !';
+$string['userimport_title_proccess'] = 'Traitement du fichier "{$a}"';
+$string['userimport_separator_error'] = 'Vous devez exporter CSV avec séparateur "; Ou "," !';
+$string['userimport_first10'] = '10 premiers enregistrements de votre CSV';
+$string['userimport_linkall'] = 'Cliquez ici pour voir tous les enregistrements CSV';
+$string['userimport_colname'] = 'Colonne {$a}';
+$string['userimport_colselect'] = '..::Sélectionner la colonne ::..';
+$string['userimport_empty'] = 'Si vous ne le sélectionnez pas, il utilisera le "{$a}" par défaut';
+$string['userimport_userdata'] = 'Données d'utilisateur';
+$string['userimport_userfields'] = 'Champs de profil supplémentaires';
+$string['userimport_firstname'] = 'Prénom ou nom complet';
+$string['userimport_firstname_desc'] = 'Si vous avez le nom complet au format CSV, remplissez simplement ce champ. Kopere se chargera de générer les deux champs.' .
+    'Si votre CSV a un prénom et un nom de famille, sélectionnez ceci et Nom de famille.';
+$string['userimport_courseenrol'] = 'Inscrire à un cours';
+$string['userimport_courseenrol_desc'] = 'Si vous souhaitez que l'étudiant soit inscrit à un cours, sélectionnez la colonne de l'identifiant du cours.';
+$string['userimport_date_desc'] = 'Le système détecte automatiquement le format de date principal.';
+$string['userimport_group_desc'] = 'Si vous souhaitez que l'étudiant soit lié à un groupe du cours, la colonne doit être identique au nom du groupe ou à l'ID interne.';
+$string['userimport_next'] = 'Traiter';
+$string['userimport_import_user_created_name'] = 'Utilisateur importé et enregistré dans Moodle';
+$string['userimport_import_course_enrol_name'] = 'L'utilisateur importé était inscrit au cours';
+$string['userimport_import_user_created_and_enrol_name'] = 'Utilisateur importé, enregistré dans Moodle et Cours';
+$string['userimport_messages'] = 'Messages que les étudiants recevront lors de l'importation';
+$string['userimport_receivemessage'] = 'L'utilisateur recevra le message avec le titre {$a}';
+$string['userimport_messageinactive'] = 'Le message intitulé {$a} est inactif et ne sera pas envoyé';
+$string['userimport_notreceivemessage'] = 'L'utilisateur ne recevra aucun message dans cette action !';
+$string['userimport_referencedata'] = 'Référencement des données Moodle avec CSV';
+$string['userimport_dataok'] = 'Données OK, insérer dans Moodle';
+$string['userimport_datanotok'] = 'Pas d'accord, j'ai oublié quelque chose';
+$string['userimport_wait'] = 'Veuillez attendre que les données soient traitées. Après le traitement, une feuille de calcul avec les données insérées sera disponible.';
+$string['userimport_noterror'] = 'Aucune erreur trouvée';
+$string['userimport_inserted'] = 'Utilisateur saisi';
+$string['userimport_cript'] = '--crypté--';
+$string['userimport_exist'] = 'L'utilisateur existe déjà. Ignoré';
+$string['userimport_passcreate'] = '--Il sera créé--';
+$string['userimport_filenotfound'] = 'Le fichier "{$a}" est introuvable. Téléchargez à nouveau le fichier CSV !';
+
+$string['userimport_event_import_course_enrol_subject'] = 'Bienvenue Bienvenue - {[course.fullname]}';
+$string['userimport_event_import_course_enrol_message'] = '<p>Bonjour {[to.fullname]},</p>
+<p>Vous avez été inscrit avec succès à {[course.fullname]}. Vous pouvez maintenant vous connecter à l'espace étudiant pour commencer à étudier quand et où vous voulez.</p>
+<p>C'est avec une grande satisfaction que {[moodle.fullname]} vous accueille.</p>
+<p>Accéder à {{course.link}}, et de bonnes études.</p>
+<p>Si vous avez des doutes, une aide est disponible.</p>
+<p>Cordialement,<br>
+    Équipe d'assistance</p>';
+
+$string['userimport_event_import_user_created_subject'] = 'Bienvenue! - {[moodle.nomcomplet]}';
+$string['userimport_event_import_user_created_message'] = '<p>Bonjour {[to.fullname]},</p>
+<p>Un compte a été créé pour vous sur le site {[moodle.fullname]}.</p>
+<p>Maintenant, je vous invite à vous connecter à l'espace étudiant avec les données suivantes :</p>
+<p><strong>Site :</strong> {[moodle.link]}<br>
+    <strong>Connexion :</strong> {[to.username]}<br>
+    <strong>Mot de passe :</strong> {[to.password]}</p>
+<p>Si vous avez des doutes, une aide est disponible.</p>
+<p>Cordialement,<br>
+    Équipe d'assistance</p>';
+
+$string['userimport_event_import_user_created_and_enrol_subject'] = 'Bienvenue Bienvenue - {[course.fullname]}';
+$string['userimport_event_import_user_created_and_enrol_message'] = '<p>Bonjour {[to.fullname]},</p>
+<p>Vous avez été inscrit avec succès à {[course.fullname]}. Vous pouvez maintenant vous connecter à l'espace étudiant pour commencer à étudier quand et où vous voulez.</p>
+<p>Maintenant, je vous invite à vous connecter à l'espace étudiant avec les données suivantes :</p>
+<p><strong>Site :</strong> {[moodle.link]}<br>
+    <strong>Connexion :</strong> {[to.username]}<br>
+    <strong>Mot de passe :</strong> {[to.password]}</p>
+<p>Si vous avez des doutes, une aide est disponible.</p>
+<p>Cordialement,<br>
+    Équipe d'assistance</p>';
+
+// Pages Web.
+$string['webpages_title'] = 'Pages statiques';
+$string['webpages_subtitle'] = 'Navigation Menus';
+$string['webpages_subtitle_help'] = 'Ces menus apparaissent sous Navigation sous "Mes cours"';
+$string['webpages_table_link'] = 'Lien';
+$string['webpages_table_menutitle'] = 'Menu';
+$string['webpages_table_title'] = 'Titre';
+$string['webpages_table_visible'] = 'Visible';
+$string['webpages_table_order'] = 'Ordre';
+$string['webpages_table_theme'] = 'Disposition';
+$string['webpages_table_text'] = 'Texte';
+$string['webpages_page_title'] = 'Titre';
+$string['webpages_page_menu'] = 'Menu';
+$string['webpages_page_create'] = 'Créer une nouvelle page';
+$string['webpages_page_crash'] = 'If you change the Moodle URL and the images give CRASH, click here';
+$string['webpages_page_notfound'] = 'Page non trouvée!';
+$string['webpages_page_nomenudelete'] = '<p>Ce menu a des pages internes et ne peut pas être supprimé !</p>';
+$string['webpages_page_confirmdeletemenu'] = '<p>Voulez-vous vraiment supprimer le menu <strong>{$a}</strong> ?</p>';
+$string['webpages_page_view'] = 'Voir page';
+$string['webpages_page_edit'] = 'Modifier la page';
+$string['webpages_page_delete'] = 'Supprimer la page';
+$string['webpages_page_course'] = 'Cours lié';
+$string['webpages_page_new'] = 'Nouvelle page';
+$string['webpages_page_edit'] = 'Modification de la page';
+$string['webpages_page_save'] = 'Sauvegarder la page' ;
+$string['webpages_page_error'] = 'Toutes les données doivent être remplies !';
+$string['webpages_page_created'] = 'Page créée !';
+$string['webpages_page_updated'] = 'Page mise à jour !';
+$string['webpages_page_deleted'] = 'Page supprimée avec succès !';
+$string['webpages_page_delete'] = 'Exclure la page';
+$string['webpages_page_delete_confirm'] = 'Voulez-vous vraiment supprimer la page <strong>{$a->title}</strong> ?';
+$string['webpages_menu_create'] = 'Créer un nouveau menu';
+$string['webpages_menu_help'] = 'Aide avec les menus';
+$string['webpages_menu_new'] = 'Nouveau menu';
+$string['webpages_menu_edit'] = 'Modification de Menu';
+$string['webpages_menu_title'] = 'Titre du menu';
+$string['webpages_menu_link'] = 'Lien du menu';
+$string['webpages_menu_save'] = 'Sauvegarder';
+$string['webpages_menu_error'] = 'Toutes les données doivent être remplies !';
+$string['webpages_menu_link_duplicate'] = '"Link" est dupliqué !';
+$string['webpages_menu_updated'] = 'Menu mis à jour !';
+$string['webpages_menu_created'] = 'Menu créé !';
+$string['webpages_menu_deleted'] = 'Menu supprimé avec succès !';
+$string['webpages_menu_subtitle'] = 'Menu statique';
+$string['webpages_menu_delete'] = 'Menu exclu';
+$string['webpages_menu_nodelete'] = 'Vous ne pouvez pas supprimer un menu qui contient des pages enregistrées !';
+$string['webpages_page_settigs'] = 'Paramètres des pages statiques';
+$string['webpages_page_theme'] = 'Mise en page "Toutes les pages"';
+$string['webpages_page_analytics'] = 'ID de suivi Google Analytics';
+$string['webpages_page_analyticsdesc'] = 'Séquence de 13 caractères commençant par UA';
+$string['webpages_theme_base'] = 'La mise en page sans les blocs';
+$string['webpages_theme_standard'] = 'Disposition par défaut avec blocs';
+$string['webpages_theme_frontpage'] = 'Mise en page de la page d'accueil du site.';
+$string['webpages_theme_popup'] = 'Pas de navigation, pas de blocs, pas d'en-tête';
+$string['webpages_theme_frametop'] = 'Pas de blocs et pied de page minimum';
+$string['webpages_theme_print'] = 'Doit uniquement afficher le contenu et les en-têtes de base';
+$string['webpages_theme_report'] = 'La mise en page utilisée pour les rapports';
+$string['webpages_allpages'] = 'Toutes les pages';
+
+$string['notification_local_kopere_dashboard'] = 'Kopere Dashboard';
+$string['notification_local_kopere_hotmoodle'] = 'Kopere HotMoodle';
+$string['notification_local_kopere_moocommerce'] = 'Kopere MooCommerce';
+$string['notification_local_kopere_pay'] = 'Kopere Pagamento';
+
+
+$string['privacy:metadata'] = 'Le plugin Kopere Dashboard ne stocke aucune donnée personnelle.';
